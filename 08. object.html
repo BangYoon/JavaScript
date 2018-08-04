@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>객체</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+          var grades = {'yoon' : 100, 'hamin' : 10, 'sujin' : 40};
+          alert(grades.hamin);
+
+          for(key in grades){
+            document.write("key: "+key+" value: "+grades[key]+"<br />")
+          }
+
+          var score = {};
+          score['yoon'] = 100;
+          score['hamin'] = 10;
+          score['sujin'] = 40;
+          alert(score.yoon);
+
+          var grades2 = {
+            'list':{'yoon':100, 'yuna':90, 'sujin':50},
+            'show':function(){
+              for(var name in this.list)
+                document.write(this.list[name]+' ');
+            }
+          };
+          alert(grades2['list']['yoon']);
+          grades2.show();
+        </script>
+    </body>
+</html>
