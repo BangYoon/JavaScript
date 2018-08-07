@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>location 객체</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    // 현재 윈도우의 url 알아내기
+    console.log(location.toString(), location.href);
+    alert(location);
+    alert(location.toString());
+    alert(location.href;
+
+    // url parsing
+    console.log(location.protocol, location.host, location.port, location.pathname, location.search, location.hash)
+
+
+    //---------url 변경하기----------
+
+    // 아래 코드는 현재 문서를 http://egoing.net으로 이동한다.
+    location.href = 'http://egoing.net';
+
+    // 아래와 같은 방법도 같은 효과를 낸다.
+    location = 'http://egoing.net';
+
+    // 아래는 현재 문서를 리로드하는 간편한 방법을 제공한다.
+    location.reload();
+    </script>
+  </body>
+</html>
