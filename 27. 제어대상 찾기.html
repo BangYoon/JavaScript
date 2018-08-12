@@ -1,0 +1,111 @@
+<!-- --------------태그명으로 대상 찾기------------------------ -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+<script>
+    var lis = document.getElementsByTagName('li');
+    for(var i=0; i < lis.length; i++){
+        lis[i].style.color='red';
+    }
+</script>
+</body>
+</html> -->
+
+
+<!-- ---------------대상 좁히려면 특정 객체 지정하기------------- -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+<ol>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ol>
+<script>
+    var ul = document.getElementsByTagName('ul')[0];
+    var lis = ul.getElementsByTagName('li');
+    for(var i=0; lis.length; i++){
+        lis[i].style.color='green';
+    }
+</script>
+</body>
+</html> -->
+
+
+<!-- ---------------------class로 대상 찾기--------------------- -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<ul>
+    <li>HTML</li>
+    <li class="active">CSS</li>
+    <li class="active">JavaScript</li>
+</ul>
+<script>
+    var lis = document.getElementsByClassName('active');
+    for(var i=0; i < lis.length; i++){
+        lis[i].style.color='blue';
+    }
+</script>
+</body>
+</html> -->
+
+
+<!-- ----------------------id로 대상 찾기----------------------- -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<ul>
+    <li>HTML</li>
+    <li id="active">CSS</li>
+    <li>JavaScript</li>
+</ul>
+<script>
+    var li = document.getElementById('active');
+    li.style.color='red';
+</script>
+</body>
+</html> -->
+
+
+<!-- ----------------------css 선택자 문법으로 객체 조회하기--------- -->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+<ol>
+    <li>HTML</li>
+    <li class="active">CSS</li>
+    <li>JavaScript</li>
+</ol>
+
+<script>
+    var li = document.querySelector('li');
+    li.style.color='red';
+    var li = document.querySelector('.active');
+    li.style.color='blue';
+</script>
+</body>
+</html>
