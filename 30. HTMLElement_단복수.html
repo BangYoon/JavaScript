@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>단수와복수</title>
+    </head>
+    <body>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li id="active">JavaScript</li>
+        </ul>
+        <script>
+            var li = document.getElementById('active');
+            console.log(li.constructor.name); //HTML Element
+            var lis = document.getElementsByTagName('li');
+            console.log(lis.constructor.name); //HTML Collaction
+
+            // document.getElementById : 리턴 데이터 타입은 HTMLLIELement
+            // document.getElementsByTagName : 리턴 데이터 타입은 HTMLCollection
+        </script>
+    </body>
+</html>
