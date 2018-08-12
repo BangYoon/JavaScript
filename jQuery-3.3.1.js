@@ -11,12 +11,12 @@
  *
  * Date: 2018-01-20T17:24Z
  */
+
 ( function( global, factory ) {
 
 	"use strict";
 
 	if ( typeof module === "object" && typeof module.exports === "object" ) {
-
 		// For CommonJS and CommonJS-like environments where a proper `window`
 		// is present, execute the factory and get jQuery.
 		// For environments that do not have a `window` with a `document`
@@ -46,46 +46,32 @@
 "use strict";
 
 var arr = [];
-
 var document = window.document;
-
 var getProto = Object.getPrototypeOf;
-
 var slice = arr.slice;
-
 var concat = arr.concat;
-
 var push = arr.push;
-
 var indexOf = arr.indexOf;
-
 var class2type = {};
-
 var toString = class2type.toString;
-
 var hasOwn = class2type.hasOwnProperty;
-
 var fnToString = hasOwn.toString;
-
 var ObjectFunctionString = fnToString.call( Object );
-
 var support = {};
+	
+	var isFunction = function isFunction( obj ) {
 
-var isFunction = function isFunction( obj ) {
-
-      // Support: Chrome <=57, Firefox <=52
-      // In some browsers, typeof returns "function" for HTML <object> elements
-      // (i.e., `typeof document.createElement( "object" ) === "function"`).
-      // We don't want to classify *any* DOM node as a function.
-      return typeof obj === "function" && typeof obj.nodeType !== "number";
-  };
-
-
-var isWindow = function isWindow( obj ) {
-		return obj != null && obj === obj.window;
+	      // Support: Chrome <=57, Firefox <=52
+	      // In some browsers, typeof returns "function" for HTML <object> elements
+	      // (i.e., `typeof document.createElement( "object" ) === "function"`).
+	      // We don't want to classify *any* DOM node as a function.
+	      return typeof obj === "function" && typeof obj.nodeType !== "number";
 	};
 
 
+	var isWindow = function isWindow( obj ) {
+		return obj != null && obj === obj.window;
+	};
 
 
 	var preservedScriptAttributes = {
@@ -112,16 +98,16 @@ var isWindow = function isWindow( obj ) {
 	}
 
 
-function toType( obj ) {
-	if ( obj == null ) {
-		return obj + "";
-	}
+	function toType( obj ) {
+		if ( obj == null ) {
+			return obj + "";
+		}
 
-	// Support: Android <=2.3 only (functionish RegExp)
-	return typeof obj === "object" || typeof obj === "function" ?
-		class2type[ toString.call( obj ) ] || "object" :
-		typeof obj;
-}
+		// Support: Android <=2.3 only (functionish RegExp)
+		return typeof obj === "object" || typeof obj === "function" ?
+			class2type[ toString.call( obj ) ] || "object" :
+			typeof obj;
+	}
 /* global Symbol */
 // Defining this global in .eslintrc.json would create a danger of using the global
 // unguarded in another place, it seems safer to define global only for this module
